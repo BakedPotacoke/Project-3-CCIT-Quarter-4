@@ -3,6 +3,9 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
 // Kontainer detail
+
+// await authGuard.requireAuth();
+
 const detailContainer = document.getElementById('event-detail-container');
 
 // Ambil ID dari URL

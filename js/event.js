@@ -1,6 +1,6 @@
 // Konfigurasi Supabase
 const supabaseUrl = 'https://useaetqppiwnwskgflew.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVzZWFldHFwcGl3bndza2dmbGV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3MDU2MzUsImV4cCI6MjA2MzI4MTYzNX0.-O82dmYa9tE6iWh5bC4LijaKgst5PPmiV1Hkf2tb7xM'; // Ganti dengan anon key Anda yang benar
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVzZWFldHFwcGl3bndza2dmbGV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3MDU2MzUsImV4cCI6MjA2MzI4MTYzNX0.-O82dmYa9tE6iWh5bC4LijaKgst5PPmiV1Hkf2tb7xM'; 
 
 // Elemen kontainer untuk menampilkan event
 const eventsContainer = document.getElementById('events-container');
@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Inisialisasi klien Supabase
     const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
-    console.log('Supabase client created successfully');
-    
+        
     // Mulai pemuatan data
     getEvents(supabaseClient);
     
