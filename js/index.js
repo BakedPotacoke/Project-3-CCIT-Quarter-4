@@ -1,6 +1,3 @@
-// JavaScript for interactivity and animations
-
-// Smooth scrolling function
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {

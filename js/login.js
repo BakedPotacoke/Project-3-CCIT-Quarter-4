@@ -7,20 +7,23 @@ const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 document.getElementById("login-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
 
-  const { data, error } = await supabaseClient
-    .from("users")
-    .select("id, email, role")
-    .eq("email", email)
-    .eq("password", password)
-    .single();
+  try {
+    const { data, error } = await supabaseClient
+      .from("users")
+      .select("id, email, role")
+      .eq("email", email)
+      .eq("password", password)
+      .single();
 
-  if (error || !data) {
-    alert("Login failed: invalid email or password");
-  } else {
-    // Simpan informasi di sessionStorage
+    if (error || !data) {
+      alert("Login failed: invalid email or password");
+      return;
+    }
+
+    // Simpan informasi user di sessionStorage
     sessionStorage.setItem(
       "user",
       JSON.stringify({
@@ -30,12 +33,16 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
       })
     );
 
+    // Redirect sesuai role
     if (data.role === "admin") {
-      alert('Login as Admin successful! Redirecting...');
+      alert("Login as Admin successful! Redirecting...");
       window.location.href = "dashboard.html";
     } else {
-      alert('Login successful! Redirecting...');
+      alert("Login successful! Redirecting...");
       window.location.href = "index.html";
     }
+  } catch (err) {
+    console.error("Login error:", err);
+    alert("An unexpected error occurred.");
   }
 });

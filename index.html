@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéCommunity - Gotta Catch 'Em All!</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper">
-                <i class="fas fa-bolt"></i>
+                <img src="./assets/pokeball.svg" alt="pokeball" />
                 PokéCommunity
             </div>
-            
+
             <!-- Mobile Toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <!-- Navigation -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#pokedex">
+                        <a class="nav-link" href="pokedex.html">
                             <i class="fas fa-book"></i> Pokédex
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#events">
+                        <a class="nav-link" href="event.html">
                             <i class="fas fa-calendar"></i> Events
                         </a>
                     </li>
                 </ul>
-                
+
                 <!-- Login Button -->
                 <a href="login.html" class="btn login-btn">
                     <i class="fas fa-user"></i> Login
@@ -54,19 +56,20 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="pokeball"></div>
         <div class="pokeball"></div>
         <div class="pokeball"></div>
         <div class="pokeball"></div>
-        
+
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center hero-content">
                     <h1 class="hero-title">Gotta Catch 'Em All!</h1>
-                    <p class="hero-subtitle">Join the ultimate Pokémon community and embark on your legendary journey</p>
+                    <p class="hero-subtitle">Join the ultimate Pokémon community and embark on your legendary journey
+                    </p>
                     <button class="btn cta-btn" onclick="scrollToSection('featured')">
                         Start Your Adventure <i class="fas fa-arrow-right ms-2"></i>
                     </button>
@@ -74,7 +77,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Featured Pokémon Section -->
     <section id="featured" class="featured-section">
         <div class="container">
@@ -87,7 +90,8 @@
                         <div class="text-center">
                             <span class="pokemon-type type-fire">Fire/Flying</span>
                         </div>
-                        <p class="text-center text-muted">The flame Pokémon that soars through the sky with incredible power.</p>
+                        <p class="text-center text-muted">The flame Pokémon that soars through the sky with incredible
+                            power.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -107,13 +111,14 @@
                         <div class="text-center">
                             <span class="pokemon-type type-electric">Electric</span>
                         </div>
-                        <p class="text-center text-muted">The beloved electric mouse Pokémon and mascot of the franchise.</p>
+                        <p class="text-center text-muted">The beloved electric mouse Pokémon and mascot of the
+                            franchise.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Events Section -->
     <section id="events" class="events-section">
         <div class="container">
@@ -154,7 +159,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -171,11 +176,12 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Custom JavaScript -->
     <script src="js/index.js"></script>
 </body>
+
 </html>
